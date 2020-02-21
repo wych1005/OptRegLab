@@ -1,5 +1,13 @@
 function Q = genq2(Q1,P1,N,M,mu)
-% Function to build a matrix Q that has the following form:
+
+% Funksjon for aa bygge opp Q-matrisa som brukes i QP-problemet 
+%                                                               
+%       min sum(xi'Q1xi + ui'P1ui)                              
+%       x,u                                                     
+%                                                               
+% i det tidsdiskrete systemet. Innholder et system for hvert    
+% tidsskritt og er på formen                                    
+%                                                               
 %      -           -                                            
 %      |Q1         |                                            
 %  Q = |  .        |                                            
@@ -8,16 +16,18 @@ function Q = genq2(Q1,P1,N,M,mu)
 %      |       .   |                                            
 %      |         P1|                                            
 %      -           -                                            
-% where Q1 is repeated N times and P1 is repeated M times.
-%
-% Q1 - Weight on states (mx*mx matrix)                       
-% P1 - Weight on inputs (mu*mu matrix)                          
-% N  - Time horizon for states
-% M  - Time horizon for inputs
 %                                                               
-% 08.03.2001 Geir Stian Landsverk
-% January 2018, Andreas L. Flåten (translated to English)
-q1	= blkdiag2(Q1,N);
+% Kall: Q = genq2(Q1,P1,N,M,mu)                                      
+%                                                               
+% Q1 - Vekt på tilstandene i kriteriet  (mx*mx matrise)                       
+% P1 - Vekt på pådragene i kriteriet    (mu*mu matrise)                          
+% N  - Tidshorisont for tilstander      (antall tidsskritt)
+% M  - Tidshorisont for pådrag          (M<N ved pådragsblokkering)
+%                                                               
+% 08.03.2001 Geir Stian Landsverk                               
+
+
 p1	= blkdiag2(P1,M);
+q1	= blkdiag2(Q1,N);
 
 Q	= blkdiag(q1,p1); 

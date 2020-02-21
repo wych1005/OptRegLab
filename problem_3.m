@@ -113,13 +113,11 @@ subplot(515)
 plot(t,x4,'m',t,x4','mo'),grid
 xlabel('tid (s)'),ylabel('pdot')
 
-data_sequence=zeros(141,5);
-data_sequence(:,1)=t';
-data_sequence(:,2)=u;
-data_sequence(:,3)=x1;
-data_sequence(:,4)=x2;
-data_sequence(:,5)=x3;
-data_sequence(:,6)=x4;
+data_sequence=zeros(141,4);
+data_sequence(:,1)=x1;
+data_sequence(:,2)=x2;
+data_sequence(:,3)=x3;
+data_sequence(:,4)=x4;
 
 q_entries = [1 1 1 1];
 Qlqr = diag(q_entries);

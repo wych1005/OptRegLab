@@ -129,7 +129,7 @@ RELATIVE_PATH_TO_ANCHOR   = ..
 MODELREF_TARGET_TYPE      = NONE
 
 #-- Support for parallel builds
-START_DIR         = C:\Users\waiyc\Documents\MATLAB\init_files_2020\Heli7
+START_DIR         = C:\Users\waiyc\Documents\MATLAB\OptRegLab-master_gc
 MASTER_ANCHOR_DIR = 
 
 #-- Support multi-instance code

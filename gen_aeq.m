@@ -1,6 +1,13 @@
 function A = gen_aeq(A1,B1,N,mx,mu)
-% Function to build a matrix representing equality constraints for a 
-% linear discrete time dynamical system. The resulting matrix has the form                            
+
+% Funksjon for aa bygge opp A-matrisa som brukes i QP-problemet 
+%                                                               
+%       min sum(xi'Q1xi + ui'P1ui)                              
+%       x,u                                                     
+%                                                               
+% i det tidsdiskrete systemet. Innholder et system for hvert    
+% tidsskritt og er på formen                                    
+%                                                               
 %      -                    -                                   
 %      |I        |-B1       |                                   
 %  A = |-A1 I    |  -B1     |                                   
@@ -8,18 +15,19 @@ function A = gen_aeq(A1,B1,N,mx,mu)
 %      |   -A1 I |      -B1 |                                   
 %      -                    -                                   
 %                                                               
-% A1 - Discrete time system matrix                          
-% B1 - Discrete time input matrix                       
-% N  - Time horizon, assumes M = N
-% mx - Number of states                               
-% mu - Number of inputs                                     
+% Kall: A = gena2(A1,B1,N,mx,mu)                                
 %                                                               
-% 08.03.2001 Geir Stian Landsverk
-% January 2018, Andreas L. Flåten (translation to English)
+% A1 - A matrise i tidsdiskret modell                           
+% B1 - B matrise i tidsdiskret modell                           
+% N  - Tidshorisont (antall tidsskritt), antar M=N
+% mx - Antall tilstander                                        
+% mu - Antall pådrag                                            
+%                                                               
+% 08.03.2001 Geir Stian Landsverk                               
                                                               
 
 A 	= zeros(N*mx,N*mx+N*mu);
-b1	= diag_repeat(-B1,N);
+b1	= blkdiag2(-B1,N);
 a1	= eye(N*mx);
 for i=1:(N-1)
   a1([(i*mx+1):((i+1)*mx)],[((i-1)*mx+1):(i*mx)])=-A1;

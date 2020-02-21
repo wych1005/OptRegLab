@@ -9,7 +9,7 @@
  *
  * Model version              : 1.186
  * Simulink Coder version : 8.9 (R2015b) 13-Aug-2015
- * C source code generated on : Fri Feb 07 16:51:11 2020
+ * C source code generated on : Fri Feb 21 16:06:47 2020
  *
  * Target selection: quarc_win64.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -838,8 +838,7 @@ typedef struct {
   real_T Gain_l;                       /* '<S12>/Gain' */
   real_T BackmotorSaturation;          /* '<S5>/Back motor: Saturation' */
   real_T FrontmotorSaturation;         /* '<S5>/Front motor: Saturation' */
-  real_T TmpSignalConversionAtToWorksp_o[2];
-  real_T TmpSignalConversionAtToWorksp_g[2];
+  real_T TmpSignalConversionAtToWorksp_o[8];
 } B_helicopter3_T;
 
 /* Block states (auto storage) for system '<Root>' */
@@ -930,15 +929,7 @@ typedef struct {
 
   struct {
     void *LoggedData;
-  } Scope1_PWORK;                      /* '<S7>/Scope1' */
-
-  struct {
-    void *LoggedData;
-  } ToWorkspace_PWORK_h;               /* '<S7>/To Workspace' */
-
-  struct {
-    void *LoggedData;
-  } ToWorkspace1_PWORK;                /* '<S7>/To Workspace1' */
+  } ToWorkspace_PWORK_a;               /* '<S7>/To Workspace' */
 
   int32_T HILInitialize_ClockModes[3]; /* '<Root>/HIL Initialize' */
   int32_T HILInitialize_QuadratureModes[8];/* '<Root>/HIL Initialize' */

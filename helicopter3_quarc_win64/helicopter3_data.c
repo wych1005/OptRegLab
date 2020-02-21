@@ -9,7 +9,7 @@
  *
  * Model version              : 1.186
  * Simulink Coder version : 8.9 (R2015b) 13-Aug-2015
- * C source code generated on : Fri Feb 07 16:51:11 2020
+ * C source code generated on : Fri Feb 21 16:06:47 2020
  *
  * Target selection: quarc_win64.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -42,8 +42,8 @@ P_helicopter3_T helicopter3_P = {
   /*  Variable: Klqr
    * Referenced by: '<Root>/K_transposed'
    */
-  { -3.1247000104797831, -7.3149220631278205, 3.0335891556719958,
-    0.77919385647748018 },
+  { -0.64883001049731348, -2.4746501257144784, 1.3121992425464171,
+    0.46249151936296479 },
   0.45,                                /* Variable: Vd_ff
                                         * Referenced by: '<Root>/Vd_bias'
                                         */

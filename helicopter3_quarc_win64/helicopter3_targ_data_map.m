@@ -563,8 +563,8 @@
     ;%
     ;% Auto data (helicopter3_B)
     ;%
-      section.nData     = 25;
-      section.data(25)  = dumData; %prealloc
+      section.nData     = 24;
+      section.data(24)  = dumData; %prealloc
       
 	  ;% helicopter3_B.TravelCounttorad
 	  section.data(1).logicalSrcIdx = 0;
@@ -661,10 +661,6 @@
 	  ;% helicopter3_B.TmpSignalConversionAtToWorksp_o
 	  section.data(24).logicalSrcIdx = 23;
 	  section.data(24).dtTransOffset = 36;
-	
-	  ;% helicopter3_B.TmpSignalConversionAtToWorksp_g
-	  section.data(25).logicalSrcIdx = 24;
-	  section.data(25).dtTransOffset = 38;
 	
       nTotData = nTotData + section.nData;
       sigMap.sections(1) = section;
@@ -792,8 +788,8 @@
       dworkMap.sections(3) = section;
       clear section
       
-      section.nData     = 20;
-      section.data(20)  = dumData; %prealloc
+      section.nData     = 18;
+      section.data(18)  = dumData; %prealloc
       
 	  ;% helicopter3_DW.FromWorkspace1_PWORK.TimePtr
 	  section.data(1).logicalSrcIdx = 15;
@@ -863,17 +859,9 @@
 	  section.data(17).logicalSrcIdx = 31;
 	  section.data(17).dtTransOffset = 16;
 	
-	  ;% helicopter3_DW.Scope1_PWORK.LoggedData
+	  ;% helicopter3_DW.ToWorkspace_PWORK_a.LoggedData
 	  section.data(18).logicalSrcIdx = 32;
 	  section.data(18).dtTransOffset = 17;
-	
-	  ;% helicopter3_DW.ToWorkspace_PWORK_h.LoggedData
-	  section.data(19).logicalSrcIdx = 33;
-	  section.data(19).dtTransOffset = 18;
-	
-	  ;% helicopter3_DW.ToWorkspace1_PWORK.LoggedData
-	  section.data(20).logicalSrcIdx = 34;
-	  section.data(20).dtTransOffset = 19;
 	
       nTotData = nTotData + section.nData;
       dworkMap.sections(4) = section;
@@ -883,31 +871,31 @@
       section.data(7)  = dumData; %prealloc
       
 	  ;% helicopter3_DW.HILInitialize_ClockModes
-	  section.data(1).logicalSrcIdx = 35;
+	  section.data(1).logicalSrcIdx = 33;
 	  section.data(1).dtTransOffset = 0;
 	
 	  ;% helicopter3_DW.HILInitialize_QuadratureModes
-	  section.data(2).logicalSrcIdx = 36;
+	  section.data(2).logicalSrcIdx = 34;
 	  section.data(2).dtTransOffset = 3;
 	
 	  ;% helicopter3_DW.HILInitialize_InitialEICounts
-	  section.data(3).logicalSrcIdx = 37;
+	  section.data(3).logicalSrcIdx = 35;
 	  section.data(3).dtTransOffset = 11;
 	
 	  ;% helicopter3_DW.HILInitialize_POModeValues
-	  section.data(4).logicalSrcIdx = 38;
+	  section.data(4).logicalSrcIdx = 36;
 	  section.data(4).dtTransOffset = 19;
 	
 	  ;% helicopter3_DW.HILInitialize_POAlignValues
-	  section.data(5).logicalSrcIdx = 39;
+	  section.data(5).logicalSrcIdx = 37;
 	  section.data(5).dtTransOffset = 27;
 	
 	  ;% helicopter3_DW.HILInitialize_POPolarityVals
-	  section.data(6).logicalSrcIdx = 40;
+	  section.data(6).logicalSrcIdx = 38;
 	  section.data(6).dtTransOffset = 35;
 	
 	  ;% helicopter3_DW.HILReadEncoderTimebase_Buffer
-	  section.data(7).logicalSrcIdx = 41;
+	  section.data(7).logicalSrcIdx = 39;
 	  section.data(7).dtTransOffset = 43;
 	
       nTotData = nTotData + section.nData;
@@ -918,7 +906,7 @@
       section.data(1)  = dumData; %prealloc
       
 	  ;% helicopter3_DW.HILInitialize_POSortedChans
-	  section.data(1).logicalSrcIdx = 42;
+	  section.data(1).logicalSrcIdx = 40;
 	  section.data(1).dtTransOffset = 0;
 	
       nTotData = nTotData + section.nData;
@@ -929,11 +917,11 @@
       section.data(2)  = dumData; %prealloc
       
 	  ;% helicopter3_DW.FromWorkspace1_IWORK.PrevIndex
-	  section.data(1).logicalSrcIdx = 43;
+	  section.data(1).logicalSrcIdx = 41;
 	  section.data(1).dtTransOffset = 0;
 	
 	  ;% helicopter3_DW.FromWorkspace_IWORK.PrevIndex
-	  section.data(2).logicalSrcIdx = 44;
+	  section.data(2).logicalSrcIdx = 42;
 	  section.data(2).dtTransOffset = 1;
 	
       nTotData = nTotData + section.nData;
@@ -966,8 +954,8 @@
   ;%
 
 
-  targMap.checksum0 = 3440586744;
-  targMap.checksum1 = 1086450788;
-  targMap.checksum2 = 453208824;
-  targMap.checksum3 = 2253584288;
+  targMap.checksum0 = 16407450;
+  targMap.checksum1 = 1269378406;
+  targMap.checksum2 = 2424257702;
+  targMap.checksum3 = 2384276355;
 
